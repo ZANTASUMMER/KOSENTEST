@@ -1,0 +1,210 @@
+<html>
+	<head>
+		<title>info</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html">TEST01</a></li>
+						<li><a href="login.html">TEST02</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>ประวัตินักเรียนผู้เข้าสมัคร</h2>
+						<p>ประวัตินักเรียนผู้เข้าสมัคร</p>
+					</header>
+
+					<a href="#" class="image fit"><img src="images/KOSEN–KMITL.jpg" alt="" /></a>
+					<section>
+    					<form id="uploadForm" enctype="multipart/form-data">
+        				<label for="imageUpload" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px; cursor: pointer;">
+            Choose Image
+        </label>
+        <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;">
+        <button type="submit" style="margin-left: 10px;">Upload</button>
+    </form>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission to a server
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+            if (file) {
+                alert(`Image "${file.name}" selected for upload!`);
+                // Add your file handling logic here (e.g., uploading to a server)
+            } else {
+                alert("No image selected!");
+            }
+        });
+    </script>
+					</section>
+					
+					
+					<!-- Form -->
+						<section>
+						  <form method="post" action="#">
+								<div class="row uniform 50%">
+									<div class="6u 20u$(xsmall)">
+										<input type="text" name="nameth" id="name"  placeholder="ชื่อ" />
+										<input type="text" name="name" id="nameth"  placeholder="NAME" />
+
+									</div>
+									<div class="6u 20u$(xsmall)">
+										<input type="text" name="snameth" id="snameth"  placeholder="นามสกุล" />
+										<input type="text" name="sname" id="sname"  placeholder="SURNAME" />
+									</div>
+									<div class="6u 20u$ (xsmall)">
+										<input type="text" name="id" id="id" placeholder="ID or PASSPORT"/>
+									</div>
+									<div class="6u 20u$(xsmall)">
+									  <input type="email" name="email" id="email"  placeholder="Email" />
+									  <input type="text" name="mobile" id="mobile"  placeholder="mobile" />
+									</div>
+								  <div class="12u$">
+										<div class="select-wrapper">
+											<select name="category" id="category">
+												<option value="">- MAJOR -</option>
+												<option value="1">ME</option>
+												<option value="2">CE</option>
+												<option value="3">EE</option>
+											</select>
+										</div>
+									</div>
+									<div class="12u$">
+										<textarea name="message" id="message" placeholder="ADDRESS" rows="6"></textarea>
+									</div>
+									<div class="6u 20u$(xsmall)">
+										<input type="text" id="schoolname" name="schoolname" placeholder="สถานศึกษาปัจจุบัน"/>
+									</div>
+									<div class="6u 20u$(xsmall)">
+										<select name="province" id="province">
+    										<option value="">- เลือกจังหวัด -</option>
+    										<option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
+    										<option value="กระบี่">กระบี่</option>
+  										  	<option value="กาญจนบุรี">กาญจนบุรี</option>
+   										 	<option value="กาฬสินธุ์">กาฬสินธุ์</option>
+  										  	<option value="กำแพงเพชร">กำแพงเพชร</option>
+ 										   	<option value="ขอนแก่น">ขอนแก่น</option>
+  										  	<option value="จันทบุรี">จันทบุรี</option>
+ 										   	<option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option>
+ 										   	<option value="ชลบุรี">ชลบุรี</option>
+										    <option value="ชัยนาท">ชัยนาท</option>
+										    <option value="ชัยภูมิ">ชัยภูมิ</option>
+ 										   	<option value="ชุมพร">ชุมพร</option>
+ 										   	<option value="เชียงราย">เชียงราย</option>
+ 										   	<option value="เชียงใหม่">เชียงใหม่</option>
+ 										   	<option value="ตรัง">ตรัง</option>
+ 										   	<option value="ตราด">ตราด</option>
+ 										   	<option value="ตาก">ตาก</option>
+  										 	<option value="นครนายก">นครนายก</option>
+ 										   	<option value="นครปฐม">นครปฐม</option>
+ 										   	<option value="นครพนม">นครพนม</option>
+  										  	<option value="นครราชสีมา">นครราชสีมา</option>
+ 										   	<option value="นครศรีธรรมราช">นครศรีธรรมราช</option>
+  										  	<option value="นนทบุรี">นนทบุรี</option>
+ 										   	<option value="นราธิวาส">นราธิวาส</option>
+  										  	<option value="น่าน">น่าน</option>
+  										  	<option value="บึงกาฬ">บึงกาฬ</option>
+  										  	<option value="บุรีรัมย์">บุรีรัมย์</option>
+  										  	<option value="ปทุมธานี">ปทุมธานี</option>
+  										  	<option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option>
+   										 	<option value="ปัตตานี">ปัตตานี</option>
+   										 	<option value="พะเยา">พะเยา</option>
+   										 	<option value="พังงา">พังงา</option>
+   										 	<option value="พิจิตร">พิจิตร</option>
+   										 	<option value="พิษณุโลก">พิษณุโลก</option>
+  										  	<option value="เพชรบุรี">เพชรบุรี</option>
+  										  	<option value="เพชรบูรณ์">เพชรบูรณ์</option>
+   										 	<option value="แพร่">แพร่</option>
+   										 	<option value="พัทลุง">พัทลุง</option>
+   										 	<option value="ภูเก็ต">ภูเก็ต</option>
+  										  	<option value="มหาสารคาม">มหาสารคาม</option>
+  										  	<option value="มุกดาหาร">มุกดาหาร</option>
+   										 	<option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option>
+   										 	<option value="ยโสธร">ยโสธร</option>
+   										 	<option value="ระนอง">ระนอง</option>
+   										 	<option value="ระยอง">ระยอง</option>
+  										  	<option value="ราชบุรี">ราชบุรี</option>
+   										 	<option value="ลพบุรี">ลพบุรี</option>
+  										  	<option value="ลำปาง">ลำปาง</option>
+   										 	<option value="ลำพูน">ลำพูน</option>
+  										  	<option value="เลย">เลย</option>
+  										  	<option value="ศรีสะเกษ">ศรีสะเกษ</option>
+  										  	<option value="สกลนคร">สกลนคร</option>
+  										  	<option value="สงขลา">สงขลา</option>
+  										  	<option value="สมุทรปราการ">สมุทรปราการ</option>
+   										 	<option value="สมุทรสงคราม">สมุทรสงคราม</option>
+  										  	<option value="สมุทรสาคร">สมุทรสาคร</option>
+  										  	<option value="สระแก้ว">สระแก้ว</option>
+   										 	<option value="สระบุรี">สระบุรี</option>
+   										 	<option value="สิงห์บุรี">สิงห์บุรี</option>
+  										  	<option value="สุโขทัย">สุโขทัย</option>
+  										  	<option value="สุพรรณบุรี">สุพรรณบุรี</option>
+   										 	<option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option>
+  										 	<option value="สุรินทร์">สุรินทร์</option>
+   										 	<option value="สตูล">สตูล</option>
+   										 	<option value="หนองคาย">หนองคาย</option>
+   										 	<option value="หนองบัวลำภู">หนองบัวลำภู</option>
+   										 	<option value="อยุธยา">อยุธยา</option>
+   										 	<option value="อำนาจเจริญ">อำนาจเจริญ</option>
+  										 	<option value="อุดรธานี">อุดรธานี</option>
+   										 	<option value="อุตรดิตถ์">อุตรดิตถ์</option>
+   										 	<option value="อุทัยธานี">อุทัยธานี</option>
+</select>
+
+
+									</div>
+									<div class="12u$ ">
+										<ul class="actions">
+											<li><input type="submit" value="submit" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+											<li><a href="bill.html" class="button icon fa-download">BYPASS</a></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>

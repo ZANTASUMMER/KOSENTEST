@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>INDEX</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="LOGIN.html">LOGIN</a></li>
+						<li><a href="index.html">LOGOUT</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>KOSEN-KMITL</h2>
+				<p>WELCOME TO KOSEN-KMITL</p>
+				<ul class="actions">
+					<li><a href="index.html" class="button special big">เลขที่สอบ</a></li>
+				</ul>
+			</section>
+
+			<!-- Two -->
+				<section class="align-center">
+					<h1>     </h1>
+					<h2>กรุณาอัพโหลดใบเสร็จ</h2>
+					
+		</section>
+				<section class="align-center">
+    					<form id="uploadForm" enctype="multipart/form-data">
+        				<label for="imageUpload" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; border-radius: 5px; cursor: pointer;">
+            Choose Image
+        </label>
+        <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;">
+        <button type="submit" style="margin-left: 10px;">Upload</button>
+    </form>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form submission to a server
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+            if (file) {
+                alert(`Image "${file.name}" selected for upload!`);
+                // Add your file handling logic here (e.g., uploading to a server)
+            } else {
+                alert("No image selected!");
+            }
+        });
+    </script>
+					</section>
+			
+
+			
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
